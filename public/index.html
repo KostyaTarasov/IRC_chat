@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link href="../src/index.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" type="image/x-icon" href="icon.ico" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <title>My chat IRC</title>
+</head>
+<body>
+	  <div id="particles-js"defer></div>
+	  
+	  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	  <button id="button">
+		<i class="fa fa-search"> Info</i>
+	  </button>
+	  <script>
+		var button=document.getElementById("button");
+		button.addEventListener("click",function()
+		{
+		  swal({
+	title: "Чат по протоколу IRC!",
+	text: "Сервер - UnrealIRCd. Веб-клиент реализовал Тарасов Константин Александрович, По вопросам писать на почту k.a.tarasov@yandex.ru",
+	icon: "success",
+	button: "Закрыть",
+  });
+		});
+
+	  </script>
+			<form id="user" method="POST" action="" enctype="multipart/form-data">
+				<script> document.write('<input type="text" id="nickname" name="nickname" placeholder="' + "Имя" + '" />'); </script>
+				<p>
+					<script> document.write('<input id="nickserv" name="nickserv" type="password" placeholder="' + "Пароль" + '" />'); </script>
+				</p>
+
+				<script> document.write('<input type="button" id="submit" value="' + "Подключиться" + '" />'); </script>
+			</form>
+  <script src="welcome.js"></script>
+  <script src="https://kit.fontawesome.com/dcb729270d.js" crossorigin="anonymous"></script>
+-->
+</body>
+</html>

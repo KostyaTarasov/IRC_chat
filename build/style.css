@@ -1,0 +1,113 @@
+html, body {
+	overflow:hidden;
+	background:url(заставка.png) center/110% fixed;
+}
+
+.fab {/*Кнопка выбора канала*/
+	font-size:55px;
+	color:rgb(228, 214, 15);
+	cursor:pointer;
+}
+.fab:hover {
+	color: rgb(128, 0, 90);
+  }
+  
+  #submit2 {/*Смена аккаунта*/
+	z-index:0;
+	position:relative;
+	  height:55px;
+	  width:30%;
+	  top:-32px;
+	  left:69%;
+	  background-color:rgb(253, 240, 124);
+	  border:5px solid rgb(202, 103, 161);
+	  cursor:pointer;
+	}
+.fas{/*Значёк смены аккаунта*/
+	pointer-events: none;
+	cursor:pointer;
+	z-index:3;
+	position:relative;
+	font-size:38px;
+	color: green;
+	top:16px;
+	left:91%;
+}
+
+#chat {/*Поле переписки*/
+	left: 50%;
+	transform: translate(-50%, 0);
+	top:6px;
+	margin:auto;
+	position:relative;
+	display: inline-block;
+	min-height:87vh;
+	flex-direction: column;
+	width:80%;
+	border:4px solid rgb(133, 67, 160);
+}
+#msgs {
+	height:87vh;
+	flex: 1;
+	background-color:#ebec91;
+}
+#msgs .window {
+	padding:0 1px 0 15px;
+	visibility:hidden;
+}
+
+#text {/*Поле для ввода сообщений*/
+	height:5vh;
+	width:80%;
+	margin:auto;
+	border:4px solid  rgb(202, 103, 161);
+	padding:5px;
+	background-color:rgb(240, 240, 240);
+}
+
+body .fad {/*Кнопка выбора канала*/
+	left:-100px; top:-5%;
+	z-index:5;
+	position:relative;
+	font-size:55px;
+	color:rgb(228, 214, 15);
+	cursor:pointer;
+	margin-right:5px;
+}
+  .fad:hover {
+	color: rgb(128, 0, 90);
+  }
+
+  
+  #bubble {/*Выбор канала*/
+	display:none;
+	position:relative;
+	padding:0px;
+	background:#5d0680;
+	-webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	border-radius:0px;
+	margin:8px 0 0 3px;
+	top:-7px;
+	z-index:10;
+}
+
+#bubble:after {/*Стрелка у выбора канала*/
+	transform: rotate(90deg);
+	content:'';
+	position:absolute;
+	border-style:solid;
+	border-width:0 15px 15px;
+	border-color:#a653c7 transparent;
+	display:block;
+	width:0;
+	z-index:1;
+	top:7px;
+	left:-30px;
+}
+
+.wselected {
+	visibility:visible !important;
+	position:absolute !important;
+	top:0;
+}

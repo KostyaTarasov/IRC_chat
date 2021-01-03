@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" type="image/x-icon" href="icon.ico" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<script src="index.js"></script>
+<title>My chat IRC</title>
+</head>
+<body>
+	<header style="height:100vh">
+		<script src="https://kit.fontawesome.com/dcb729270d.js" crossorigin="anonymous"></script>
+		<div class="container"style="max-width: 100%; max-height: 100%;padding-left: 0px;padding-right: 0px">
+			<div class="row">
+		  <div class="col"style="left:5px;">	<!--Колонка1 выбора канала-->	
+			<script> document.write('<i id="btn_add_chan" class="fab fa-telegram-plane" aria-hidden="true" title="'+ "Выбор канала" +'"> Канал</i>'); </script>
+			<div id="bubble">
+				<div id="addchan" class="options">
+					<script> document.write('<input id="newchan" type="text" placeholder="'+ "Подключиться к каналу" +'" />'); </script>
+					<input id="create_newchan" type="button" value="Ок" />
+				</div>
+			</div>
+		</div>
+
+		<div class="col"style="width:9%;margin:auto;top:-17px;left:60px">	<!--Колонка2 Текст-->	
+		<style>
+		.shadow 
+		{
+			text-shadow:red 0 0 10px; /* Подсветка красного цвета */		 
+			height: 0px;
+			width: 0px;
+		}		
+		</style>
+		<h1 class="shadow"><div class="mx-auto"style="width: 550px;">Чат IRC, сервер - UnrealIRCd</div></h1>
+	</div>
+
+	<div class="col"style=" height: 55px;"><!--Колонка3 смена аккаунта-->	
+		<i class="fas fa-user-circle "></i>
+		<div id="icons">
+			<script> document.write('<input type="button" id="submit2" value="' + "Аккаунт" + '" />'); </script>
+		</div>
+	</div>
+</div>
+	<div class="w-100"><!--Колонка4 чат-->	
+	<div class="col">		
+		<div id="chat">
+			<div id="msgs">
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="w-100"><!--Колонка5 ввод сообщения-->
+	<div class="col"style="top:6px">
+		<div id="text"contenteditable="true"></div>
+		<div id="bubble2"></div></div>
+	</div>
+</div>
+</div>
+<script src="irc.js"></script>
+<script src="irc_events.js"></script>
+</header>
+</body>
+</html>
