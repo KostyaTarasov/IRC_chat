@@ -8,9 +8,9 @@ body,html{
 }
 
 #particles-js{
+  background:url(заставка.png) center/cover;
   position:fixed;
-  background-color: purple;
-  width:2000px;
+  width:3000px;
 }
 
 input[type=text] {

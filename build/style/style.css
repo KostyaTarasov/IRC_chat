@@ -1,6 +1,6 @@
 html, body {
 	overflow:hidden;
-	background:url(заставка.png) center/110% fixed;
+	background:url(заставка.png) center/cover;
 }
 
 .fab {/*Кнопка выбора канала*/

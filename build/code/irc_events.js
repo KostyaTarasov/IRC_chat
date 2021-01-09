@@ -16,11 +16,6 @@ let numLines = 0, editbox = '';
 			send();
 		}
 	}
-	
-	let bubble = document.getElementById('bubble');
-	bubble.onclick = function(e) {
-		e.stopPropagation();
-	}
 		
 	let btn_add_chan = document.getElementById('btn_add_chan');	
 	btn_add_chan.onclick = function(e) {	

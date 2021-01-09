@@ -4,10 +4,10 @@ let urlify_check = true;
 let submit = document.getElementById('submit2');
 submit.onclick = function() 
 {
-	document.location.href = 'index.html?';
+	document.location.href = '../index.html?';
 }
 
-let nickname = getParameterByName('index.html?');
+let nickname = getParameterByName('../index.html?');
 if (nickname === null) {
 	
 	nickname = getCookie('nick_connect');
@@ -86,13 +86,6 @@ function getParameterByName(name, url) {
     if (!results) return null;
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
-function unescapeHtml(escapedStr) {
-    var div = document.createElement('div');
-    div.innerHTML = escapedStr;
-    var child = div.childNodes[0];
-    return child ? child.nodeValue : '';
 }
 
 function connectWebSocket() {
@@ -285,59 +278,6 @@ function style(msg) {
 	return res;
 }
 
-function parseIdle(seconds) {
-	let y = '', mo = '', d = '', h = '', mi = '';
-	let yfloat = seconds / 31471200;
-	let yfloor = Math.floor( yfloat );
-	if (yfloor >= 1) {
-		y = yfloor + ' year(s)';
-		seconds -= yfloat * 31471200;
-	}
-	let mofloat = seconds / 2622600;
-	let mofloor = Math.floor( mofloat );
-	if (mofloor >= 1) {
-		mo = mofloor + ' month(s)';
-		seconds -= mofloat * 2622600;
-	}
-	
-	let dfloat = seconds / 86400;
-	let dfloor = Math.floor( dfloat );
-	if (dfloor >= 1) {
-		d = dfloor + ' day(s)';
-		seconds -= dfloat * 86400;
-	}
-	let hfloat = seconds / 3600;
-	let hfloor = Math.floor( hfloat );
-	if (hfloor >= 1) {
-		h = hfloor + ' hour(s)';
-		seconds -= hfloat * 3600;
-	}
-	let mifloat = seconds / 60;
-	let mifloor = Math.floor( mifloat );
-	if (mifloor >= 1) {
-		mi = mifloor + ' minute(s)';
-		seconds -= hfloat * 3600;
-	}
-	if (seconds > 0) {
-		seconds = seconds + ' second(s)';
-	}
-	else {
-		seconds = '';
-	}
-	return y + mo + d + h + mi + seconds;
-}
-
-function timeFrom( timestamp ) {
-	let date = new Date( timestamp * 1000 );
-	let d = checkTime( date.getDate() );
-	let mo = checkTime( date.getMonth() + 1);
-	let y = checkTime( date.getFullYear() );
-	let h = checkTime( date.getHours() );
-	let m = checkTime( date.getMinutes() );
-	let s = checkTime( date.getSeconds() );
-	return d + '/' + mo + '/' + y + ' - ' + h + ':' + m + ':' + s;
-}
-
 function currentTime() {
 	let today = new Date();	
 	let h = checkTime( today.getHours() );
@@ -466,7 +406,6 @@ function join(chan) {
 	});
 	document.getElementById('editbox').style.display = 'block';
 	document.getElementById('text').focus();
-	addFavInfoEvents();
 }
 
 function msg(raw) {
@@ -518,12 +457,8 @@ function msg(raw) {
 	}
 }
 
-function getMsg(raw) { // :Kitu2!Wircy@F537BEB1:B76530E1:A9B980DA:IP PRIVMSG #Welcome :test
+function getMsg(raw) {
 	return raw.split('PRIVMSG')[1].split(':').splice(1).join(':');
-}
-
-function ci(a, b) {
-	return a.toLowerCase().localeCompare(b.toLowerCase());
 }
 
 function strip(html) {
@@ -705,7 +640,3 @@ function urlify(text, idm, ajaxRequest, recipient, status) {//для преоб�
 	});
 	return words.join(' ');
 }
-	document.getElementById(recipient).innerHTML += html;
-	document.getElementById('ytid_' + id).onclick = function() {	
-		document.getElementById('yt_' + id).remove();	
-	}
